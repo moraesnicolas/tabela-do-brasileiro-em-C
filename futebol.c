@@ -5,13 +5,11 @@ int main() {
     int pontos[5] = {46, 38, 33, 32, 25};
     int i;
 
-    /* Mostra a tabela com os times */
     printf("===== TABELA DOS TIMES DO GRUPO =====\n");
     for (i = 0; i < 5; i++) {
         printf("%d - %s: %d pontos\n", i + 1, nomes[i], pontos[i]);
     }
 
-    /* Processamento: soma, media, maior e menor */
     int soma = 0, maior = pontos[0], menor = pontos[0];
     int indiceMaior = 0, indiceMenor = 0;
 
@@ -36,8 +34,6 @@ int main() {
     printf("Maior pontuacao: %s (%d pts)\n", nomes[indiceMaior], maior);
     printf("Menor pontuacao: %s (%d pts)\n", nomes[indiceMenor], menor);
 
-    /* Busca em vetor: repete a pergunta ate encontrar um time,
-       ou ate o usuario digitar -1 para desistir da busca */
     int pontosBuscados, encontrado, posicao;
 
     do {
@@ -67,7 +63,6 @@ int main() {
 
     } while (encontrado == 0);
 
-    /* Decisao: classifica o time buscado, se foi encontrado */
     if (encontrado == 1 && pontos[posicao] >= 40) {
         printf("Situacao: briga pelo titulo.\n");
     } else if (encontrado == 1 && pontos[posicao] >= 35) {
